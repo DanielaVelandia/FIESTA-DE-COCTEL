@@ -72,7 +72,7 @@ La FFT descompone la señal en sus frecuencias constituyentes, revelando picos q
 
 ### Preguntas para el estudiante:
   
- -¿Cómo afecta la posición relativa de los micrófonos y las fuentes sonoras en la efectividad de la separación de señales?**
+ -**¿Cómo afecta la posición relativa de los micrófonos y las fuentes sonoras en la efectividad de la separación de señales?**
  
 La efectividad de la separación de señales en sistemas de beamforming que utilizan tres micrófonos depende en gran medida de la posición relativa de los micrófonos y las fuentes sonoras.
 
@@ -83,7 +83,7 @@ Por lo tanto, es crucial considerar la relación señal-ruido en la configuraci�
 
 •	*Características de las fuentes sonoras:* La direccionalidad y el volumen de las fuentes sonoras también influyen en la separación de señales. Fuentes que emiten en diferentes direcciones pueden ser más fácilmente separadas si los micrófonos están bien posicionados para captar las diferencias en el tiempo de llegada de las ondas sonoras.
 
--¿Qué mejoras implementaría en la metodología para obtener mejores resultados?**
+-**¿Qué mejoras implementaría en la metodología para obtener mejores resultados?**
 
 Para optimizar la metodología en la técnica de beamforming y obtener mejores resultados, se pueden aplicar varias estrategias que abordan tanto el diseño del sistema como los algoritmos de procesamiento:
 
