@@ -54,7 +54,7 @@ indicando una señal más afectada por el ruido.
   ![2](https://github.com/user-attachments/assets/bdb1c8d9-ecc8-41d9-bf8b-bf9a03c910cf)
   ![3](https://github.com/user-attachments/assets/0c197dab-9902-4f8e-900a-ef298034ac0f)
 
-> *Dominio de la Frecuencia:*
+> **Dominio de la Frecuencia:**
 > **- Eje Horizontal (Frecuencia):** Representa las frecuencias en hertzios (Hz) presentes en la señal.
 > **- Eje Vertical (Magnitud):** Muestra la magnitud de cada componente de frecuencia en la señal.
   
