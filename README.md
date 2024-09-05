@@ -48,8 +48,7 @@ Es importante considerar que la amplitud de la señal juega un papel crucial en 
 indicando una señal más afectada por el ruido.
 
 *3.	Procesamiento de señales:*
-- Se realiza un análisis temporal y espectral de las señales capturadas por cada micrófono, con el objetivo de identificar las características principales de cada fuente sonora. Para el análisis espectral, se emplea la Transformada Rápida de Fourier (FFT), una herramienta esencial en el análisis de señales que convierte una señal del dominio
-  temporal al dominio de la frecuencia.
+- Se realiza un análisis temporal y espectral de las señales capturadas por cada micrófono, con el objetivo de identificar las características principales de cada fuente sonora. Para el análisis espectral, se emplea la Transformada Rápida de Fourier (FFT), una herramienta esencial en el análisis de señales que convierte una señal del dominio temporal al dominio de la frecuencia.
   
   ![1](https://github.com/user-attachments/assets/29461f0e-88f4-4191-aa0a-761c451922d6)
   ![2](https://github.com/user-attachments/assets/bdb1c8d9-ecc8-41d9-bf8b-bf9a03c910cf)
@@ -59,22 +58,17 @@ indicando una señal más afectada por el ruido.
 > *- Eje Horizontal (Frecuencia):* Representa las frecuencias en hertzios (Hz) presentes en la señal.
 > *- Eje Vertical (Magnitud):* Muestra la magnitud de cada componente de frecuencia en la señal.
   
-La FFT descompone la señal en sus frecuencias constituyentes, revelando picos que indican las frecuencias predominantes. Cada pico en la gráfica representa una frecuencia específica en la que la señal tiene una mayor amplitud,
-lo que sugiere que en la señal original existen componentes sonoros dominantes en esas frecuencias.
+La FFT descompone la señal en sus frecuencias constituyentes, revelando picos que indican las frecuencias predominantes. Cada pico en la gráfica representa una frecuencia específica en la que la señal tiene una mayor amplitud, lo que sugiere que en la señal original existen componentes sonoros dominantes en esas frecuencias.
 
--	la investigar los métodos de separación de fuentes, se optó por utilizar la *técnica de beamforming*. Esta técnica de procesamiento de señales permite dirigir la recepción o transmisión de señales hacia una dirección específica, mejorando la calidad de la señal y reduciendo el ruido de fondo. El beamforming es comúnmente aplicado en sistemas de audio,
-  comunicaciones y radar.
+-	Al investigar los métodos de separación de fuentes, se optó por utilizar la *técnica de beamforming*. Esta técnica de procesamiento de señales permite dirigir la recepción o transmisión de señales hacia una dirección específica, mejorando la calidad de la señal y reduciendo el ruido de fondo. El beamforming es comúnmente aplicado en sistemas de audio, comunicaciones y radar.
  	
-  La técnica permite que un sistema, como un arreglo de micrófonos, enfoque su sensibilidad en una dirección particular. Esto es útil para captar señales de interés mientras se minimizan las interferencias provenientes de otras direcciones. Además, el beamforming mejora la Relación Señal-Ruido (SNR) al concentrar la captura del sonido en una dirección específica, 
-  lo que puede aumentar significativamente la calidad de la señal. Esta mejora es crucial en aplicaciones como conferencias telefónicas y grabaciones de audio en entornos ruidosos.
+  La técnica permite que un sistema, como un arreglo de micrófonos, enfoque su sensibilidad en una dirección particular. Esto es útil para captar señales de interés mientras se minimizan las interferencias provenientes de otras direcciones. Además, el beamforming mejora la Relación Señal-Ruido (SNR) al concentrar la captura del sonido en una dirección específica, lo que puede aumentar significativamente la calidad de la señal. Esta mejora es crucial en aplicaciones como conferencias telefónicas y grabaciones de audio en entornos ruidosos.
 
-  La técnica de beamforming tiene un ancho de banda finito, lo que significa que solo puede enfocar un rango limitado de frecuencias a la vez. Esta limitación puede provocar distorsión fuera del rango de frecuencias para el que el beamformer está optimizado. Además, si los micrófonos no están perfectamente posicionados o calibrados,
-  los errores resultantes pueden introducir distorsión en la señal enfocada, afectando la calidad general del audio capturado.
+  La técnica de beamforming tiene un ancho de banda finito, lo que significa que solo puede enfocar un rango limitado de frecuencias a la vez. Esta limitación puede provocar distorsión fuera del rango de frecuencias para el que el beamformer está optimizado. Además, si los micrófonos no están perfectamente posicionados o calibrados, los errores resultantes pueden introducir distorsión en la señal enfocada, afectando la calidad general del audio capturado.
 
   ![image](https://github.com/user-attachments/assets/d8defaf7-4dd7-41f2-a92e-cee8acfb8f1e)
 
-  Un SNR de 0.10 dB significa que la señal deseada y el ruido están casi al mismo nivel, lo que indica que la señal no se diferencia lo suficiente del ruido. Este resultado puede ser sorprendente, ya que un valor tan bajo, sugiere que la voz que se intentó filtrar se escucha mejor que el ruido producido por las otras voces, 
-  a pesar de haber aplicado beamforming para intentar mejorar la calidad de la señal.
+  Un SNR de 0.10 dB significa que la señal deseada y el ruido están casi al mismo nivel, lo que indica que la señal no se diferencia lo suficiente del ruido. Este resultado puede ser sorprendente, ya que un valor tan bajo, sugiere que la voz que se intentó filtrar se escucha mejor que el ruido producido por las otras voces, a pesar de haber aplicado beamforming para intentar mejorar la calidad de la señal.
 
 ### Preguntas para el estudiante:
   
@@ -82,21 +76,18 @@ lo que sugiere que en la señal original existen componentes sonoros dominantes 
  
 La efectividad de la separación de señales en sistemas de beamforming que utilizan tres micrófonos depende en gran medida de la posición relativa de los micrófonos y las fuentes sonoras.
 
-•	*Orientación de los micrófonos:* Para maximizar la efectividad del beamforming, es esencial que los micrófonos estén correctamente orientados hacia las fuentes sonoras. Se recomienda el uso de micrófonos direccionales, que pueden enfocarse en la fuente deseada y minimizar el ruido de fondo. Una orientación incorrecta puede resultar 
-en una captura ineficaz de la señal deseada y la inclusión de sonidos no deseados.
+•	*Orientación de los micrófonos:* Para maximizar la efectividad del beamforming, es esencial que los micrófonos estén correctamente orientados hacia las fuentes sonoras. Se recomienda el uso de micrófonos direccionales, que pueden enfocarse en la fuente deseada y minimizar el ruido de fondo. Una orientación incorrecta puede resultar en una captura ineficaz de la señal deseada y la inclusión de sonidos no deseados.
 
 •	*Ruido de fondo:*  La efectividad del beamforming puede verse afectada por la presencia de ruido ambiental. Si los micrófonos están demasiado alejados de la fuente deseada, es más probable que capten ruido ambiental, lo que dificulta la separación de la señal deseada. 
 Por lo tanto, es crucial considerar la relación señal-ruido en la configuración.
 
-•	*Características de las fuentes sonoras:* La direccionalidad y el volumen de las fuentes sonoras también influyen en la separación de señales. Fuentes que emiten en diferentes direcciones pueden ser más fácilmente separadas si los micrófonos están bien posicionados 
-para captar las diferencias en el tiempo de llegada de las ondas sonoras.
+•	*Características de las fuentes sonoras:* La direccionalidad y el volumen de las fuentes sonoras también influyen en la separación de señales. Fuentes que emiten en diferentes direcciones pueden ser más fácilmente separadas si los micrófonos están bien posicionados para captar las diferencias en el tiempo de llegada de las ondas sonoras.
 
 -¿Qué mejoras implementaría en la metodología para obtener mejores resultados?**
 
 Para optimizar la metodología en la técnica de beamforming y obtener mejores resultados, se pueden aplicar varias estrategias que abordan tanto el diseño del sistema como los algoritmos de procesamiento:
 
-•	*Ajuste de la Configuración Geométrica:* Configurar los micrófonos de manera que maximicen la separación espacial, como en arreglos en forma de triángulo o en línea, mejora la capacidad del sistema para detectar diferencias en el tiempo de llegada de las señales de diferentes fuentes sonoras. 
-Esta configuración es esencial para la efectividad del beamforming.
+•	*Ajuste de la Configuración Geométrica:* Configurar los micrófonos de manera que maximicen la separación espacial, como en arreglos en forma de triángulo o en línea, mejora la capacidad del sistema para detectar diferencias en el tiempo de llegada de las señales de diferentes fuentes sonoras. Esta configuración es esencial para la efectividad del beamforming.
 
 •	*Selección de Micrófonos Direccionales:* Utilizar micrófonos con patrones de captación direccional ayuda a enfocar la señal en la fuente deseada, reduciendo al mismo tiempo la captación de ruido ambiental.
 
