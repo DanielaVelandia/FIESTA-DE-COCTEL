@@ -10,17 +10,17 @@ habla y la cancelación de ruido.
 En la segunda practica de laboratorio de procesamiento digital de señales, se busca replicar el problema de la fiesta de cóctel, donde existen 𝑛 fuentes sonoras capturadas por un arreglo 
 de 𝑛 micrófonos, siguiendo la siguiente metodología:
 
-*1.	Configuración del sistema:*
+**1.	Configuración del sistema:**
 - Se conectaron tres micrófonos de celular, ubicados estratégicamente en la sala a una distancia de *0.8 m* entre sí. Estos micrófonos fueron dispuestos para captar diferentes combinaciones de las señales emitidas por las tres fuentes.
-  Cada micrófono fue calibrado con una *frecuencia de muestreo de 44 kHz* y un *nivel de cuantificación de 160 kbps*.
+  Cada micrófono fue calibrado con una **frecuencia de muestreo de 44 kHz** y un **nivel de cuantificación de 160 kbps**.
   
-- En una sala insonorizada, se colocaron tres personas en posiciones fijas, cada una a una distancia de *0.8 m* y orientada frente a uno de los micrófonos, para simular
-   un entorno típico de *"fiesta de cóctel"*.
+- En una sala insonorizada, se colocaron tres personas en posiciones fijas, cada una a una distancia de **0.8 m** y orientada frente a uno de los micrófonos, para simular
+   un entorno típico de **"fiesta de cóctel"**.
    
    ![image](https://github.com/user-attachments/assets/9f9a00a9-b47e-4edb-85aa-2430913b9b57)
    
-*2.	Captura de la señal:*
-- La señal se generó utilizando las voces de los tres sujetos de prueba; cada uno de ellos pronunció una frase diferente durante el tiempo de captura de la señal, que fue de *6 segundos*.
+**2.	Captura de la señal:**
+- La señal se generó utilizando las voces de los tres sujetos de prueba; cada uno de ellos pronunció una frase diferente durante el tiempo de captura de la señal, que fue de **6 segundos**.
   Las señales captadas por los micrófonos fueron registradas por el sistema de adquisición de datos y guardadas para su posterior análisis.
 
   ###### FRASES PRONUNCIADAS:
@@ -30,11 +30,11 @@ de 𝑛 micrófonos, siguiendo la siguiente metodología:
   
 ![image](https://github.com/user-attachments/assets/3cdd5fde-7e5d-4951-b137-5f627bd0ff43)
 
-> *Ejes de la Gráfica:*
+> **Ejes de la Gráfica:**
 
-> *-	Eje Vertical (Amplitud):* Representa la amplitud de la señal de audio captada por el micrófono. La amplitud está directamente relacionada con la intensidad del sonido, donde valores más altos indican sonidos más fuertes.
+> **-	Eje Vertical (Amplitud):** Representa la amplitud de la señal de audio captada por el micrófono. La amplitud está directamente relacionada con la intensidad del sonido, donde valores más altos indican sonidos más fuertes.
 
-> *-	Eje Horizontal (Tiempo):* Muestra el transcurso del tiempo durante la grabación. Este eje permite observar cómo varía la amplitud de la señal a lo largo del tiempo, proporcionando una visión dinámica de la evolución del sonido.
+> **-	Eje Horizontal (Tiempo):** Muestra el transcurso del tiempo durante la grabación. Este eje permite observar cómo varía la amplitud de la señal a lo largo del tiempo, proporcionando una visión dinámica de la evolución del sonido.
 
 -	Se realizó la grabación del ruido ambiente en la sala insonorizada utilizando los tres micrófonos. A partir de estas grabaciones, se calculó la Relación Señal-Ruido (SNR),
    un parámetro crucial que mide la diferencia entre la señal de audio deseada y el ruido no deseado capturado por el micrófono.
@@ -47,7 +47,7 @@ de 𝑛 micrófonos, siguiendo la siguiente metodología:
 Es importante considerar que la amplitud de la señal juega un papel crucial en el análisis del SNR. Cuando la señal tiene una alta amplitud y el ruido una amplitud baja, el SNR será elevado, lo que indica una buena calidad de la señal. Por el contrario, si la señal tiene una amplitud baja y el ruido una amplitud comparable, el SNR será bajo, 
 indicando una señal más afectada por el ruido.
 
-*3.	Procesamiento de señales:*
+**3.	Procesamiento de señales:**
 - Se realiza un análisis temporal y espectral de las señales capturadas por cada micrófono, con el objetivo de identificar las características principales de cada fuente sonora. Para el análisis espectral, se emplea la Transformada Rápida de Fourier (FFT), una herramienta esencial en el análisis de señales que convierte una señal del dominio temporal al dominio de la frecuencia.
   
   ![1](https://github.com/user-attachments/assets/29461f0e-88f4-4191-aa0a-761c451922d6)
@@ -55,8 +55,8 @@ indicando una señal más afectada por el ruido.
   ![3](https://github.com/user-attachments/assets/0c197dab-9902-4f8e-900a-ef298034ac0f)
 
 > *Dominio de la Frecuencia:*
-> *- Eje Horizontal (Frecuencia):* Representa las frecuencias en hertzios (Hz) presentes en la señal.
-> *- Eje Vertical (Magnitud):* Muestra la magnitud de cada componente de frecuencia en la señal.
+> **- Eje Horizontal (Frecuencia):** Representa las frecuencias en hertzios (Hz) presentes en la señal.
+> **- Eje Vertical (Magnitud):** Muestra la magnitud de cada componente de frecuencia en la señal.
   
 La FFT descompone la señal en sus frecuencias constituyentes, revelando picos que indican las frecuencias predominantes. Cada pico en la gráfica representa una frecuencia específica en la que la señal tiene una mayor amplitud, lo que sugiere que en la señal original existen componentes sonoros dominantes en esas frecuencias.
 
@@ -76,29 +76,29 @@ La FFT descompone la señal en sus frecuencias constituyentes, revelando picos q
  
 La efectividad de la separación de señales en sistemas de beamforming que utilizan tres micrófonos depende en gran medida de la posición relativa de los micrófonos y las fuentes sonoras.
 
-•	*Orientación de los micrófonos:* Para maximizar la efectividad del beamforming, es esencial que los micrófonos estén correctamente orientados hacia las fuentes sonoras. Se recomienda el uso de micrófonos direccionales, que pueden enfocarse en la fuente deseada y minimizar el ruido de fondo. Una orientación incorrecta puede resultar en una captura ineficaz de la señal deseada y la inclusión de sonidos no deseados.
+•	**Orientación de los micrófonos:** Para maximizar la efectividad del beamforming, es esencial que los micrófonos estén correctamente orientados hacia las fuentes sonoras. Se recomienda el uso de micrófonos direccionales, que pueden enfocarse en la fuente deseada y minimizar el ruido de fondo. Una orientación incorrecta puede resultar en una captura ineficaz de la señal deseada y la inclusión de sonidos no deseados.
 
-•	*Ruido de fondo:*  La efectividad del beamforming puede verse afectada por la presencia de ruido ambiental. Si los micrófonos están demasiado alejados de la fuente deseada, es más probable que capten ruido ambiental, lo que dificulta la separación de la señal deseada. 
+•	**Ruido de fondo:**  La efectividad del beamforming puede verse afectada por la presencia de ruido ambiental. Si los micrófonos están demasiado alejados de la fuente deseada, es más probable que capten ruido ambiental, lo que dificulta la separación de la señal deseada. 
 Por lo tanto, es crucial considerar la relación señal-ruido en la configuración.
 
-•	*Características de las fuentes sonoras:* La direccionalidad y el volumen de las fuentes sonoras también influyen en la separación de señales. Fuentes que emiten en diferentes direcciones pueden ser más fácilmente separadas si los micrófonos están bien posicionados para captar las diferencias en el tiempo de llegada de las ondas sonoras.
+•	**Características de las fuentes sonoras:** La direccionalidad y el volumen de las fuentes sonoras también influyen en la separación de señales. Fuentes que emiten en diferentes direcciones pueden ser más fácilmente separadas si los micrófonos están bien posicionados para captar las diferencias en el tiempo de llegada de las ondas sonoras.
 
 -**¿Qué mejoras implementaría en la metodología para obtener mejores resultados?**
 
 Para optimizar la metodología en la técnica de beamforming y obtener mejores resultados, se pueden aplicar varias estrategias que abordan tanto el diseño del sistema como los algoritmos de procesamiento:
 
-•	*Ajuste de la Configuración Geométrica:* Configurar los micrófonos de manera que maximicen la separación espacial, como en arreglos en forma de triángulo o en línea, mejora la capacidad del sistema para detectar diferencias en el tiempo de llegada de las señales de diferentes fuentes sonoras. Esta configuración es esencial para la efectividad del beamforming.
+•	**Ajuste de la Configuración Geométrica:** Configurar los micrófonos de manera que maximicen la separación espacial, como en arreglos en forma de triángulo o en línea, mejora la capacidad del sistema para detectar diferencias en el tiempo de llegada de las señales de diferentes fuentes sonoras. Esta configuración es esencial para la efectividad del beamforming.
 
-•	*Selección de Micrófonos Direccionales:* Utilizar micrófonos con patrones de captación direccional ayuda a enfocar la señal en la fuente deseada, reduciendo al mismo tiempo la captación de ruido ambiental.
+•	**Selección de Micrófonos Direccionales:** Utilizar micrófonos con patrones de captación direccional ayuda a enfocar la señal en la fuente deseada, reduciendo al mismo tiempo la captación de ruido ambiental.
 
-•	*Filtrado Avanzado:* Implementar técnicas de filtrado que eliminen el ruido de fondo antes de aplicar el beamforming puede mejorar significativamente la calidad de la señal. Esto incluye el uso de filtros adaptativos que se ajusten dinámicamente a las características del ruido en el entorno.
+•	**Filtrado Avanzado:** Implementar técnicas de filtrado que eliminen el ruido de fondo antes de aplicar el beamforming puede mejorar significativamente la calidad de la señal. Esto incluye el uso de filtros adaptativos que se ajusten dinámicamente a las características del ruido en el entorno.
 
-•	*Uso de Técnicas de Visualización:* Incorporar herramientas de visualización que muestren el rendimiento del beamformer en tiempo real puede facilitar el ajuste de la configuración y optimizar la captación de señales durante su uso.
+•	**Uso de Técnicas de Visualización:** Incorporar herramientas de visualización que muestren el rendimiento del beamformer en tiempo real puede facilitar el ajuste de la configuración y optimizar la captación de señales durante su uso.
 
 ### INSTRUCCIONES 
 Este código está diseñado para ser utilizado en la plataforma Spyder. Para ejecutarlo correctamente, sigue estos pasos:
 
-*1.	Instalación de librerías:* Asegúrate de instalar las librerías necesarias en la consola usando los siguientes comandos:
+**1.	Instalación de librerías:** Asegúrate de instalar las librerías necesarias en la consola usando los siguientes comandos:
 >	 pip install librosa
 
 >	 pip install matplotlib
@@ -107,9 +107,9 @@ Este código está diseñado para ser utilizado en la plataforma Spyder. Para ej
 
 >	 pip install soundfile
 
-*2.	Configuración de los archivos de audio:* Cambia los nombres de los archivos de audio dentro del código por los correspondientes a tu proyecto.
+**2.	Configuración de los archivos de audio:** Cambia los nombres de los archivos de audio dentro del código por los correspondientes a tu proyecto.
    Todos los archivos de audio deben estar guardados en la misma carpeta.
    
-*3.	Duración de los audios:* Es importante que todos los audios tengan la misma duración.
+**3.	Duración de los audios:** Es importante que todos los audios tengan la misma duración.
 
-*4.	Grabación de ruido ambiental:* Asegúrate de grabar el ruido del ambiente, ya que será necesario para el procesamiento adecuado del código.
+**4.	Grabación de ruido ambiental:** Asegúrate de grabar el ruido del ambiente, ya que será necesario para el procesamiento adecuado del código.
