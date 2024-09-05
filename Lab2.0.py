@@ -56,7 +56,7 @@ def mostrar_espectro(y, sr, titulo, max_freq=20000):
     plt.plot(freqs, Y_magnitude,color=colores[i-1] )
     plt.title(f"Espectro de Frecuencia - {titulo}")
     plt.xlabel("Frecuencia (Hz)")
-    plt.ylabel("Amplitud")
+    plt.ylabel("Magnitud")
     plt.grid(True)
     plt.show()
 
