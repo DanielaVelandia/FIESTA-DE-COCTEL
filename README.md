@@ -2,7 +2,7 @@
 En un evento tipo cóctel, se instalaron varios micrófonos con el fin de capturar las conversaciones de los asistentes. 
 Al concluir la fiesta, se solicitó a los ingenieros que extrajeran el audio de la voz de uno de los participantes. 
 Sin embargo, al analizar las grabaciones, los ingenieros encontraron que las señales capturadas por los micrófonos eran una mezcla de sonidos provenientes de distintas fuentes (personas), 
-lo que presentó el desafío de aislar la voz deseada. Este escenario se conoce como el *"problema de la fiesta de cóctel"*, el cual se refiere a la capacidad de un sistema para enfocarse en 
+lo que presentó el desafío de aislar la voz deseada. Este escenario se conoce como el **"problema de la fiesta de cóctel"**, el cual se refiere a la capacidad de un sistema para enfocarse en 
 una única fuente sonora mientras filtra las demás en un entorno con múltiples emisores de sonido. 
 Este problema es común tanto en sistemas auditivos humanos como en sistemas artificiales, y su resolución es crucial para aplicaciones como la mejora de la voz, el reconocimiento del 
 habla y la cancelación de ruido.
@@ -11,7 +11,7 @@ En la segunda practica de laboratorio de procesamiento digital de señales, se b
 de 𝑛 micrófonos, siguiendo la siguiente metodología:
 
 **1.	Configuración del sistema:**
-- Se conectaron tres micrófonos de celular, ubicados estratégicamente en la sala a una distancia de *0.8 m* entre sí. Estos micrófonos fueron dispuestos para captar diferentes combinaciones de las señales emitidas por las tres fuentes.
+- Se conectaron tres micrófonos de celular, ubicados estratégicamente en la sala a una distancia de **0.8 m** entre sí. Estos micrófonos fueron dispuestos para captar diferentes combinaciones de las señales emitidas por las tres fuentes.
   Cada micrófono fue calibrado con una **frecuencia de muestreo de 44 kHz** y un **nivel de cuantificación de 160 kbps**.
   
 - En una sala insonorizada, se colocaron tres personas en posiciones fijas, cada una a una distancia de **0.8 m** y orientada frente a uno de los micrófonos, para simular
@@ -40,9 +40,9 @@ de 𝑛 micrófonos, siguiendo la siguiente metodología:
    un parámetro crucial que mide la diferencia entre la señal de audio deseada y el ruido no deseado capturado por el micrófono.
 
  	En cuanto a los resultados obtenidos en la relación señal/ruido (SNR) para cada uno de los tres micrófonos:
-  ###### -	Micrófono 1 (18.82 dB): Presenta la relación señal/ruido más baja, lo que indica que la señal capturada por este micrófono tiene mayor interferencia de ruido en comparación con los otros dos.
-  ###### -	Micrófono 2 (29.99 dB): Muestra la relación señal/ruido más alta, lo que sugiere que la señal de este micrófono es la más clara y tiene menos interferencia de ruido de fondo.
-  ###### -	Micrófono 3 (20.56 dB): Tiene una calidad intermedia, con un SNR mejor que el del Micrófono 1, pero inferior al del Micrófono 2.
+  ###### -	*Micrófono 1 (18.82 dB):* Presenta la relación señal/ruido más baja, lo que indica que la señal capturada por este micrófono tiene mayor interferencia de ruido en comparación con los otros dos.
+  ###### -	*Micrófono 2 (29.99 dB):* Muestra la relación señal/ruido más alta, lo que sugiere que la señal de este micrófono es la más clara y tiene menos interferencia de ruido de fondo.
+  ###### -	*Micrófono 3 (20.56 dB):* Tiene una calidad intermedia, con un SNR mejor que el del Micrófono 1, pero inferior al del Micrófono 2.
 
 Es importante considerar que la amplitud de la señal juega un papel crucial en el análisis del SNR. Cuando la señal tiene una alta amplitud y el ruido una amplitud baja, el SNR será elevado, lo que indica una buena calidad de la señal. Por el contrario, si la señal tiene una amplitud baja y el ruido una amplitud comparable, el SNR será bajo, 
 indicando una señal más afectada por el ruido.
@@ -60,7 +60,7 @@ indicando una señal más afectada por el ruido.
   
 La FFT descompone la señal en sus frecuencias constituyentes, revelando picos que indican las frecuencias predominantes. Cada pico en la gráfica representa una frecuencia específica en la que la señal tiene una mayor amplitud, lo que sugiere que en la señal original existen componentes sonoros dominantes en esas frecuencias.
 
--	Al investigar los métodos de separación de fuentes, se optó por utilizar la *técnica de beamforming*. Esta técnica de procesamiento de señales permite dirigir la recepción o transmisión de señales hacia una dirección específica, mejorando la calidad de la señal y reduciendo el ruido de fondo. El beamforming es comúnmente aplicado en sistemas de audio, comunicaciones y radar.
+-	Al investigar los métodos de separación de fuentes, se optó por utilizar la **técnica de beamforming**. Esta técnica de procesamiento de señales permite dirigir la recepción o transmisión de señales hacia una dirección específica, mejorando la calidad de la señal y reduciendo el ruido de fondo. El beamforming es comúnmente aplicado en sistemas de audio, comunicaciones y radar.
  	
   La técnica permite que un sistema, como un arreglo de micrófonos, enfoque su sensibilidad en una dirección particular. Esto es útil para captar señales de interés mientras se minimizan las interferencias provenientes de otras direcciones. Además, el beamforming mejora la Relación Señal-Ruido (SNR) al concentrar la captura del sonido en una dirección específica, lo que puede aumentar significativamente la calidad de la señal. Esta mejora es crucial en aplicaciones como conferencias telefónicas y grabaciones de audio en entornos ruidosos.
 
@@ -68,7 +68,7 @@ La FFT descompone la señal en sus frecuencias constituyentes, revelando picos q
 
   ![image](https://github.com/user-attachments/assets/d8defaf7-4dd7-41f2-a92e-cee8acfb8f1e)
 
-  Un SNR de 0.10 dB significa que la señal deseada y el ruido están casi al mismo nivel, lo que indica que la señal no se diferencia lo suficiente del ruido. Este resultado puede ser sorprendente, ya que un valor tan bajo, sugiere que la voz que se intentó filtrar se escucha mejor que el ruido producido por las otras voces, a pesar de haber aplicado beamforming para intentar mejorar la calidad de la señal.
+  Un **SNR de 0.10 dB** significa que la señal deseada y el ruido están casi al mismo nivel, lo que indica que la señal no se diferencia lo suficiente del ruido. Este resultado puede ser sorprendente, ya que un valor tan bajo, sugiere que la voz que se intentó filtrar se escucha mejor que el ruido producido por las otras voces, a pesar de haber aplicado beamforming para intentar mejorar la calidad de la señal.
 
 ### Preguntas para el estudiante:
   
